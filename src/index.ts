@@ -34,7 +34,7 @@ export interface JoypadState {
 }
 
 export interface Joypad {
-  poll: JoypadState;
+  poll(): JoypadState;
 }
 
 export interface BootstrapOptions {
