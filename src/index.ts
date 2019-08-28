@@ -22,9 +22,25 @@ export interface Screen {
   update(): void;
 }
 
+export interface JoypadState {
+  a: boolean;
+  b: boolean;
+  select: boolean;
+  start: boolean;
+  up: boolean;
+  down: boolean;
+  left: boolean;
+  right: boolean;
+}
+
+export interface Joypad {
+  poll: JoypadState;
+}
+
 export interface BootstrapOptions {
   audio: AudioController;
   screen: Screen;
+  joypad: Joypad;
   romData: Uint8Array;
 }
 
