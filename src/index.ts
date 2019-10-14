@@ -25,6 +25,10 @@ export interface Screen {
 export interface JoypadState {
   a: boolean;
   b: boolean;
+  x: boolean;
+  y: boolean;
+  l: boolean;
+  r: boolean;
   select: boolean;
   start: boolean;
   up: boolean;
