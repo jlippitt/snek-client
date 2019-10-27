@@ -49,7 +49,7 @@ export interface BootstrapOptions {
 }
 
 export interface GuiInterface {
-  update(now: number): void;
+  update(now: number): Promise<void>;
   suspend(): void;
   resume(): void;
 }
@@ -60,7 +60,7 @@ export interface EmulatorOptions {
   fileExtensions: string[];
   screen: Size;
   audio: AudioOptions;
-  bootstrap(options: BootstrapOptions): GuiInterface;
+  bootstrap(options: BootstrapOptions): Promise<GuiInterface>;
 }
 
 export interface Api {
